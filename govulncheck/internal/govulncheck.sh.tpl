@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+TOOL_PATH="%tool_path%"
+
+if [[ "%warn%" == "True" ]] ; then
+  # Set the module cache to PWD, so we can download the vulnerability cache
+  GOMODCACHE=$PWD $TOOL_PATH %srcs% || exit 0
+else
+  GOMODCACHE=$PWD $TOOL_PATH %srcs%
+fi
