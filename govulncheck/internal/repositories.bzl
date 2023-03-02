@@ -113,6 +113,22 @@ def _govulncheck_repositories_impl(
         ],
     )
 
+    maybe(
+        http_archive,
+        name = "vulndb",
+        build_file_content = """
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "files",
+    srcs = glob(["**/*"]),
+)
+        """,
+        sha256 = "2b6a6f0a839bfc07a047583c046d06d7f913ed7157ad734fbc053283cda57708",
+        strip_prefix = "go_vulndb-20230302164853",
+        urls = ["https://github.com/midnightconman/go_vulndb/archive/20230302164853.tar.gz"],
+    )
+
     http_archives_factory(
         govulncheck_package_info = _govulncheck_package_info,
     )
