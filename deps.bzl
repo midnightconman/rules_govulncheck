@@ -1,3 +1,5 @@
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
 load(
     "@io_bazel_rules_govulncheck//govulncheck:defs.bzl",
     _govulncheck_repositories = "govulncheck_repositories",

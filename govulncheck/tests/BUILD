@@ -10,7 +10,6 @@ package(
 analysis_test(
     name = "test_tools_analysed",
     targets = [
-        "@io_bazel_rules_govulncheck//:govulncheck",
         "@io_bazel_rules_govulncheck//govulncheck:defs",
     ],
 )
@@ -18,7 +17,6 @@ analysis_test(
 build_test(
     name = "test_main_tools_building",
     targets = [
-        "@io_bazel_rules_govulncheck//:govulncheck",
         "@io_bazel_rules_govulncheck//govulncheck:defs",
     ],
 )
