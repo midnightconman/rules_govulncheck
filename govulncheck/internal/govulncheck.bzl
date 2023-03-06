@@ -15,7 +15,7 @@ def _govulncheck_test_impl(ctx):
     govulncheck_test_runner_template = govulncheck_info.template.files.to_list()[0]
 
     runfiles = ctx.runfiles(
-        files = ctx.files.srcs + [go.go] + ctx.files.deps,
+        files = ctx.files.srcs + [go.go] + ctx.files.data,
         transitive_files = govulncheck_info.tool.files,
     )
 
@@ -63,7 +63,7 @@ bazel test //examples:govulncheck
 """,
     test = True,
     attrs = {
-        "deps": attr.label(default = "@vulndb//:files"),
+        "data": attr.label(default = "@vulndb//:files"),
         "srcs": attr.label_list(
             mandatory = True,
             allow_files = True,
