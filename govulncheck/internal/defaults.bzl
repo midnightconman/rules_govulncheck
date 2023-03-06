@@ -43,8 +43,14 @@ DEFAULT_PLATFORMS = GoVulnCheckPlatformsInfo(
     }),
 )
 
-_DEFAULT_GOVULNCHECK_VERSION = "v0.0.0-20230224180816-edec1fb0a9c7"
+_DEFAULT_GOVULNCHECK_VERSION = "v0.0.0-20230306122848-edec1fb0a9c7"
 _DEFAULT_AVAILABLE_GOVULNCHECK_BINARIES = {
+    ("v0.0.0-20230306122848-edec1fb0a9c7", "darwin-amd64"): "515ade5aed8c9a1d75538a70e471798dacd1f08d640a3b6becbcc9ab00aeaf71",
+    ("v0.0.0-20230306122848-edec1fb0a9c7", "darwin-arm64"): "04e3ea70b12a6c1461a2f0c0ca9e4e04895e9f8bcf0571792cfa64085aefbfa4",
+    ("v0.0.0-20230306122848-edec1fb0a9c7", "linux-amd64"): "90cfa177df7bd1ffbea6e254ed6e516e3535628e5c3049e5ebb9d8e53f6c72aa",
+    ("v0.0.0-20230306122848-edec1fb0a9c7", "linux-arm64"): "d77af62ec660fc81510ec3611baf613e3640990cffcb078655b51abc772d0481",
+    ("v0.0.0-20230306122848-edec1fb0a9c7", "windows-amd64"): "7dc33eb4392daaf9dbf2d9945f08a3d702d4745dac176bb4701be15c022a43f4",
+    ("v0.0.0-20230306122848-edec1fb0a9c7", "windows-arm64"): "5908bfdfb71590466201be96a6baaf14acd6e55e4d956477635f3b403637ec20",
     ("v0.0.0-20230224180816-edec1fb0a9c7", "darwin-amd64"): "90e12ee49ef3ede5c0d03be6ab36b2d13c3a047806bc23b893f92d1101d3be5d",
     ("v0.0.0-20230224180816-edec1fb0a9c7", "darwin-arm64"): "6ebf83231628f5176912680b7ce50d278968b3edb17850b60ec151a8206dc8c7",
     ("v0.0.0-20230224180816-edec1fb0a9c7", "linux-amd64"): "fa50a7b750fe461a30de92e70c979cfb46365fc24391c1b323d6d5074f2fc5e2",
