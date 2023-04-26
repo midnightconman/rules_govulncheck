@@ -7,7 +7,7 @@ PATH=$PATH:$PWD/%go_root%/bin
 
 if [[ "%warn%" == "True" ]] ; then
   # Set the module cache to PWD, so we can download the vulnerability cache
-  GOMODCACHE=$PWD GOROOT=$PWD/%go_root% GOVULNDB=file://$PWD/external/vulndb $TOOL_PATH -mode=binary %srcs% || exit 0
+  GOMODCACHE=$PWD GOROOT=$PWD/%go_root% $TOOL_PATH --db=file://$PWD/external/vulndb --mode=binary %srcs% || exit 0
 else
-  GOMODCACHE=$PWD GOROOT=$PWD/%go_root% GOVULNDB=file://$PWD/external/vulndb $TOOL_PATH -mode=binary %srcs%
+  GOMODCACHE=$PWD GOROOT=$PWD/%go_root% $TOOL_PATH --db=file://$PWD/external/vulndb --mode=binary %srcs%
 fi
